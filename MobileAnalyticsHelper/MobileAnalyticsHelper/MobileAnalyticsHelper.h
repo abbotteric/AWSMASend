@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AWSMobileAnalytics.h>
 
-@interface MobileAnalyticsHelper : NSObject
+#define AWS_APP_ID @"7b130f0755be411ca44546dd8d438499"
+#define AWS_COGNITO_ID @"us-east-1:bf57347b-a51b-4ee2-a0bd-bea93fa1172f"
+
+@interface MobileAnalyticsHelper : NSObject {
+    AWSMobileAnalytics *analytics;
+}
+
++(MobileAnalyticsHelper *)sharedHelper;
+-(void)sendCustomAnalytics:(NSString *)eventName withAttributes:(NSDictionary *)attributes;
+
 
 @end

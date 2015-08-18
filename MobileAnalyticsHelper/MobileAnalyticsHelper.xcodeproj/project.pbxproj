@@ -356,9 +356,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C382B3133D1346B5FE297174 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -366,9 +369,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6ED9F1B8713847C83593C5D8 /* Pods.release.xcconfig */;
 			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
